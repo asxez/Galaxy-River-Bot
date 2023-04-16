@@ -1,8 +1,8 @@
 import asyncio
+import jieba
 import re
 
 import config
-import jieba
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage, MessageEvent, ActiveGroupMessage, Source
 from graia.ariadne.event.mirai import MemberJoinRequestEvent

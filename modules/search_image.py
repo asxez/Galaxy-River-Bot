@@ -14,7 +14,7 @@ channel.name("Saucenao")
 channel.description("以图搜图")
 channel.author("asxe")
 
-apikey = "" # 请输你自己的
+apikey = "53049005824d9fc89ce02700c7d31364850ca9ef" # 请输你自己的
 
 @channel.use(
     ListenerSchema(

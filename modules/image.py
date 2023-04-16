@@ -1,11 +1,11 @@
 import asyncio
+
 import base64
+import config
 import json
 import os
 import random
 import re
-
-import config
 import requests
 from graia.ariadne import Ariadne
 from graia.ariadne.event.message import GroupMessage
@@ -105,8 +105,8 @@ async def ai_image(app:Ariadne, group:Group, message:MessageChain):
             "upsample": 1,
             "width": 512
         }
-        if os.path.exists(f"F:/WorkSpace/py-case/cs/modules/data/imgs/{message.display.strip().split(' ')[1]}.jpg"):
-            await app.send_message(group,MessageChain(Image(path=f"F:/WorkSpace/py-case/cs/modules/data/imgs/{message.display.strip().split(' ')[1]}.jpg")))
+        if os.path.exists(f"./modules/data/imgs/{message.display.strip().split(' ')[1]}.jpg"):
+            await app.send_message(group,MessageChain(Image(path=f"./modules/data/imgs/{message.display.strip().split(' ')[1]}.jpg")))
             return
         else:
             try:

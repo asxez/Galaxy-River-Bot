@@ -1,5 +1,4 @@
 import json
-
 import requests
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage
