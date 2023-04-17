@@ -1,7 +1,7 @@
 <div align="center">
 
 # Galaxy-River-Bot
-一个以 [Graia Ariadne](https://github.com/GraiaProject/Ariadne) 框架为基础的 QQ 机器人
+🐔一个以 [Graia Ariadne](https://github.com/GraiaProject/Ariadne) 框架为基础的 QQ 机器人🐔
 
 </div>
 
@@ -22,6 +22,11 @@
 14. 控制端后门
 
     more……
+
+# 食用方法🐔
+1. 下载依赖：pip install -r requirements.txt
+2. 终端运行：python bot.py   ----注意：运行的前提是你已经启动了mcl并已登录
+
 
 # 注意！
 1. 本机仅为学校新生群管理所需进行开发，主要是管理QQ群，针对我们的需要，很有可能随时大改，不建议clone
