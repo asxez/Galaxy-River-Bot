@@ -28,7 +28,7 @@ async def start(app:Ariadne, group:Group, member:Member, message:MessageChain):
 
     elif message.display.strip() == '1':
         #chatgpt
-        await app.send_message(group,MessageChain('指令：/gpt 问题\n使用指令提问，避免了大家在使用中出现无意间艾特到机器人，更加人性化\n例：/gpt 你是谁？你是由谁开发的？\n(请使用一句话描述出你的需求，因资金原因，本机并未开发具有上下文的AI)'))
+        await app.send_message(group,MessageChain('指令：/gpt 问题\n例：/gpt 你是谁？你是由谁开发的？\n(请使用一句话描述出你的需求，因资金原因，本机并未开发具有上下文的AI)'))
         return
 
     elif message.display.strip() == '2':
@@ -70,6 +70,7 @@ async def start(app:Ariadne, group:Group, member:Member, message:MessageChain):
     elif message.display.strip() == '12':
         # 关于
         await app.send_message(group,MessageChain(Image(path=f'./modules/关于.png')))
+        await app.send_message(group,MessageChain('https://asxez.github.io'))
         return
 
     elif message.display.strip() == '/shutdown' and member.id == config.YOU_QQ:
