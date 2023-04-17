@@ -1,22 +1,10 @@
 [project]
 name = "Galaxy River Bot"
-version = "1.0"
+version = "2.0"
 description = "QQ机器人，主要功能是管理群，接入了chatgpt和new bing，加了些娱乐功能"
 license = "MIT"
+authors = "ASXE"
+requires-python = "^3.10"
+my_blog_url = "https://asxez.github.io/"
+my_box = "2973918177@qq.com"
 
-[dependencies]
-python = "^3.8"
-requests = ""
-openai = ""
-graia.ariadne = "0.11.3"
-graia.saya = "0.0.17"
-graia.scheduler = "0.1.4"
-graia.broadcast = "0.19.2"
-graiax.silkcoder = "0.3.6"
-websockets = ""
-httpx = ""
-Crypto = "" #这个模块不是直接用这个名称安装，大家自行浏览器搜索哈
-#还有一些我懒得打了（太多了），这些库你们自己看哈哈哈，没写版本都安装最新的吧
-
-
-#我python版本是3.10.6，反正你的版本必须要支持异步库
