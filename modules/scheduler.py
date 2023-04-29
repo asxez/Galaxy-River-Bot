@@ -1,4 +1,5 @@
 import config
+import json
 import random
 import requests
 import time
@@ -42,6 +43,14 @@ def get_weather():
             return '获取天气信息失败'
     else:
         return '获取天气信息失败'
+
+def get_thursday():
+    index = random.randint(1,169)
+    with open('./modules/data/thursday/post.json','r',encoding='utf-8') as f:
+        a = f.read()
+        b = json.loads(a)
+        return b.get('post')[index]
+
 
 @channel.use(SchedulerSchema(timer=timers.crontabify('30 7 * * *')))
 async def morning(app:Ariadne):
@@ -87,3 +96,18 @@ async def smile_aft(app:Ariadne):
             return
     else:
         return
+
+
+@channel.use(SchedulerSchema(timer=timers.crontabify('0 12 * * 4')))
+async def crazy_thursday(app:Ariadne):
+    """
+    定时疯狂星期四
+    Args:
+        app:
+
+    Returns:
+
+    """
+    text = get_thursday()
+    await app.send_group_message(config.group_id,MessageChain(text))
+    
