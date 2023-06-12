@@ -1,8 +1,8 @@
+import json
+import re
 from pathlib import Path
 
 import graiax.silkcoder as silkcoder
-import json
-import re
 import requests
 from graia.ariadne import Ariadne
 from graia.ariadne.event.message import GroupMessage
@@ -13,7 +13,8 @@ from graia.ariadne.model import Group
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
 from graiax.silkcoder import ffmpeg
-from modules import get_wyy_id
+
+from . import get_wyy_id
 
 channel=Channel.current()
 

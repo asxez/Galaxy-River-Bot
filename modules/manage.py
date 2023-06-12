@@ -1,8 +1,7 @@
 import asyncio
-import jieba
 import re
 
-import config
+import jieba
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage, MessageEvent, ActiveGroupMessage, Source
 from graia.ariadne.event.mirai import MemberJoinRequestEvent
@@ -11,6 +10,8 @@ from graia.ariadne.message.parser.base import ContainKeyword
 from graia.ariadne.model import Group, Member
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
+
+from .. import config
 
 channel=Channel.current()
 

@@ -1,13 +1,15 @@
-import config
 import json
 import random
-import requests
 import time
+
+import requests
 from graia.ariadne.app import Ariadne
 from graia.ariadne.message.chain import MessageChain
 from graia.saya import Channel
 from graia.scheduler import timers
 from graia.scheduler.saya.schema import SchedulerSchema
+
+from .. import config
 
 channel = Channel.current()
 

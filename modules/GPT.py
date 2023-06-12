@@ -1,7 +1,6 @@
-import config
-import openai
 import re
-import to_image
+
+import openai
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage
 from graia.ariadne.message.chain import MessageChain
@@ -9,7 +8,10 @@ from graia.ariadne.message.element import Image
 from graia.ariadne.model import Group
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
-from modules import bing
+
+from . import bing
+from .. import config
+from .. import to_image
 
 api_key=config.OPENAI_KEY
 

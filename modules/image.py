@@ -1,11 +1,10 @@
 import asyncio
-
 import base64
-import config
 import json
 import os
-import random
 import re
+
+import config
 import requests
 from graia.ariadne import Ariadne
 from graia.ariadne.event.message import GroupMessage
@@ -76,8 +75,8 @@ async def ai_image(app:Ariadne, group:Group, message:MessageChain):
     :return:
     """
     if message.display.strip() == '8':
-        num = random.randint(1,196)
-        await app.send_message(group,MessageChain(Image(path=f'./modules/data/pictures/{num}.png')))
+        #num = random.randint(1,196)
+        await app.send_message(group,MessageChain('本功能已删除'))
         return
     else:
         return

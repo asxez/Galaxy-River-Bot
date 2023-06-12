@@ -2,7 +2,7 @@ import re
 import time
 import uuid
 
-from modules import EdgeGPT
+from . import EdgeGPT
 
 COOKIE_FILE_PATH = './modules/cookie.json'
 CHATBOT = {}
