@@ -33,13 +33,12 @@ with saya.module_context():
     saya.require('modules.image')
     saya.require('modules.music')
     saya.require('modules.start')
-    #saya.require('modules.search_image')
     saya.require('modules.yiyan')
     saya.require('modules.GPT')
     saya.require('modules.manage')
     #saya.require('modules.test')
     saya.require('modules.back_end')
-    saya.require('modules.scheduler')
+    #saya.require('modules.scheduler')
     saya.require('modules.majors')
 
 
