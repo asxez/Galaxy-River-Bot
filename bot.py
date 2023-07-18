@@ -2,6 +2,7 @@ import asyncio
 import os
 import sys
 
+import config as c
 from creart import create
 from graia.ariadne.app import Ariadne, Broadcast
 from graia.ariadne.app import GroupMessage
@@ -9,8 +10,6 @@ from graia.ariadne.connection.config import config, HttpClientConfig, WebsocketC
 from graia.ariadne.message.chain import MessageChain
 from graia.ariadne.model import Group
 from graia.saya import Saya
-
-import config as c
 
 saya=create(Saya)
 bcc=create(Broadcast)
@@ -40,7 +39,6 @@ with saya.module_context():
     saya.require('modules.manage')
     #saya.require('modules.test')
     saya.require('modules.back_end')
-    saya.require('modules.translate')
     saya.require('modules.scheduler')
     saya.require('modules.majors')
 
