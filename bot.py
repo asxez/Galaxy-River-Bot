@@ -2,7 +2,6 @@ import asyncio
 import os
 import sys
 
-import config as c
 from creart import create
 from graia.ariadne.app import Ariadne, Broadcast
 from graia.ariadne.app import GroupMessage
@@ -11,8 +10,10 @@ from graia.ariadne.message.chain import MessageChain
 from graia.ariadne.model import Group
 from graia.saya import Saya
 
-saya=create(Saya)
-bcc=create(Broadcast)
+from . import config as c
+
+saya = create(Saya)
+bcc = create(Broadcast)
 
 app = Ariadne(
     connection=config(
@@ -26,24 +27,19 @@ app = Ariadne(
     ),
 )
 
-"""
-模块加载
-"""
+# 模块加载
 with saya.module_context():
-    saya.require('modules.image')
     saya.require('modules.music')
     saya.require('modules.start')
-    saya.require('modules.yiyan')
     saya.require('modules.GPT')
     saya.require('modules.manage')
-    #saya.require('modules.test')
+    # saya.require('modules.test')
     saya.require('modules.back_end')
-    #saya.require('modules.scheduler')
-    saya.require('modules.majors')
+    # saya.require('modules.scheduler')
 
 
 @bcc.receiver(GroupMessage)
-async def clean(app1:Ariadne, group:Group, message:MessageChain):
+async def clean(app1: Ariadne, group: Group, message: MessageChain):
     """
     清除new bing记忆
     此处采用重启程序的方法清除
@@ -55,9 +51,10 @@ async def clean(app1:Ariadne, group:Group, message:MessageChain):
     if message.display.strip() == '/clean':
         await app1.send_message(group, MessageChain('记忆已清除，请等待几秒钟'))
         await asyncio.sleep(1)
-        python=sys.executable
-        os.execl(python,python,*sys.argv)
+        python = sys.executable
+        os.execl(python, python, *sys.argv)
     else:
         return
+
 
 app.launch_blocking()

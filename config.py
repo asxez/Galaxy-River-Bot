@@ -9,7 +9,7 @@ ws="ws://localhost:8080"
 
 
 #机器人qq
-BOT_QQ=
+BOT_QQ: int
 
 #openai的key
 OPENAI_KEY=""
@@ -22,7 +22,7 @@ MANAGE_PEOPLE=[]
 
 #系统管理员 （int类型）
 #可以自己改list类型,注意模块中的地方，你要自己改一个遍历什么的，或者 a in [],建议用后者
-YOU_QQ=
+YOU_QQ: int
 #mirai
 verifyKey=''
 
@@ -35,7 +35,7 @@ GD_KEY=''
 
 #所需发送的群号
 #我只用在一个群，所以是int类型，你们可以自改list类型，这个改成list类型了也要改模块中的部分代码
-group_id=
+group_id: int
 
 #定时笑话，地址：https://www.mxnzp.com/
 SMILE_APPID=''
